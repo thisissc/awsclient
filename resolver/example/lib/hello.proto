@@ -1,0 +1,15 @@
+syntax="proto3";
+
+package msg;
+
+message HelloRequest{
+  string text=1;
+}
+
+message HelloResponse{
+  bool ok=1;
+}
+
+service HelloService{
+  rpc helloServer(HelloRequest)returns(HelloResponse){}
+}
