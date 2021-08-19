@@ -43,3 +43,12 @@ func GetSessionByProfile(profile string) *session.Session {
 
 	return sessionInst
 }
+
+func GetSessionFromEnv() *session.Session {
+	sess, err := session.NewSession()
+	if err != nil {
+		log.Println(err)
+	}
+
+	return sess
+}
